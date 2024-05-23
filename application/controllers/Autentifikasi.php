@@ -64,4 +64,9 @@ class Autentifikasi extends CI_Controller
             redirect('autentifikasi');
         }
     }
+    public function cekData($where = null)
+    {
+        return $this->db->get_where('user', $where);
+    }
+
 }
