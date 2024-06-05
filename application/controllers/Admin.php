@@ -5,7 +5,7 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // cek_login();
+        cek_login();
     }
     public function index()
     {
@@ -18,5 +18,14 @@ class Admin extends CI_Controller
         $this->load->view('templates/topbar', $data);
         $this->load->view('admin/index', $data);
         $this->load->view('templates/footer');
+    }
+
+    public function blok()
+    {
+        $this->load->view('autentifikasi/blok');
+    }
+    public function gagal()
+    {
+        $this->load->view('autentifikasi/gagal');
     }
 }   
