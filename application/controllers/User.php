@@ -5,7 +5,8 @@ class User extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // cek_login();
+        $this->load->helper('pustaka');
+        cek_login();
     }
     public function index()
     {
@@ -73,4 +74,6 @@ class User extends CI_Controller
             redirect('user');
         }
      }
+
+     
 }
